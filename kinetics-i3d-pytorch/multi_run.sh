@@ -1,0 +1,4 @@
+python extract_features.py -mode rgb -load_model models/rgb_imagenet.pt -gpu 1 -root /media/zjg/workspace/video/validation -split /media/zjg/workspace/action/data/thumos14_val.json -save_dir /media/zjg/workspace/action/npy/
+python extract_features.py -mode rgb -load_model models/rgb_imagenet.pt -gpu 1 -root /media/zjg/workspace/video/test -split /media/zjg/workspace/action/data/thumos14_test.json -save_dir /media/zjg/workspace/action/npy/
+python extract_features.py -mode flow -load_model models/flow_imagenet.pt -gpu 1 -root /media/zjg/workspace/video/validation -split /media/zjg/workspace/action/data/thumos14_val.json -save_dir /media/zjg/workspace/action/npy/
+python extract_features.py -mode flow -load_model models/flow_imagenet.pt -gpu 1 -root /media/zjg/workspace/video/test -split /media/zjg/workspace/action/data/thumos14_test.json -save_dir /media/zjg/workspace/action/npy/
