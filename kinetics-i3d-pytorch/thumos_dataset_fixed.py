@@ -39,7 +39,7 @@ def video_to_tensor(pic):
 def load_rgb_frames(image_dir, vid, start, num):
   frames = []
   for i in range(start, start+num, 3):
-    img = cv2.imread(os.path.join(image_dir, vid, image_tmpl.format(i)))#[:, :, [2, 1, 0]]
+    img = cv2.imread(os.path.join(image_dir, vid, image_tmpl.format(i)))[:, :, [2, 1, 0]]  # BGR -> RGB
     # print(os.path.join(image_dir, vid, image_tmpl.format(i)))
     w,h,c = img.shape
     if w < 226 or h < 226:
